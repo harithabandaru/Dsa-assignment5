@@ -1,0 +1,30 @@
+﻿#include <stdio.h>  
+#include <string.h>  
+#define SIZE 100  
+int top,stack[SIZE];  
+void push(char x)
+{  
+          if(top == SIZE-1){  
+          printf("stack overflow");  
+      }  else {  
+          stack[++top]=x;  
+      }  
+  
+}  
+  
+void pop(){  
+      
+      printf("%c",stack[top--]);  
+}  
+main()  
+{  
+   char str[]="haritha";  
+   int len = strlen(str);  
+   int i;  
+  
+   for(i=0;i<len;i++)  
+        push(str[i]);  
+  
+   for(i=0;i<len;i++)  
+      pop();  
+}
